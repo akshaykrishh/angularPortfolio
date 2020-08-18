@@ -10,13 +10,16 @@
         <div class="col-xl-6">
           <div class="row">
             <div class="col">
-              <a class="nav-link onHoverDark activePage" href="/">Home</a>
+              <a class="nav-link onHoverDark activeCustom" href="/home" *ngIf="active === '/home'">Home</a>
+              <a class="nav-link onHoverDark inactiveCustom" href="/home" *ngIf="active !== '/home'">Home</a>
             </div>
             <div class="col">
-              <a class="nav-link onHoverDark inactivePage" href="/work">Work</a>
+              <a class="nav-link onHoverDark activeCustom" href="/work" *ngIf="active === '/work'">Work</a>
+              <a class="nav-link onHoverDark inactiveCustom" href="/work" *ngIf="active !== '/work'">Work</a>
             </div>
             <div class="col">
-              <a class="nav-link onHoverDark inactivePage" href="/contact">Contact</a>
+              <a class="nav-link onHoverDark activeCustom" href="/contact" *ngIf="active === '/contact'">Contact</a>
+              <a class="nav-link onHoverDark inactiveCustom" href="/contact" *ngIf="active !== '/contact'">Contact</a>
             </div>
           </div>
         </div>

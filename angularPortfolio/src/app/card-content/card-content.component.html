@@ -1,5 +1,5 @@
 <div class="shadow row bg-light mb-5 mt-4 mx-1">
-  <a href="{{imgLink}}" *ngIf="imgLink">
+  <a href="{{imgLink}}" *ngIf="imgLink" target="_blank">
     <img src="{{img}}" width="100%">
   </a>
   <img src="{{img}}" width="100%" *ngIf="!imgLink">
@@ -10,8 +10,6 @@
     </a>
     <h2 [innerHTML]="header | safeHtml" *ngIf="!headerLink"> <i class="fa fa-external-link" style="font-size:12px"></i>
     </h2>
-    <p [innerHTML]="'Last Updated: ' + lastUpdated | safeHtml"></p>
     <p [innerHTML]="content | safeHtml"></p>
-    <button type="button" class="btn btn-light btn-outline-dark" (click)="evaluate()" *ngIf="button">{{button}}</button>
   </div>
 </div>

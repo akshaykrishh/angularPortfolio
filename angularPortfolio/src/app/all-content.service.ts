@@ -5,10 +5,7 @@ export interface ContentInterface {
   headerLink: string;
   img: string;
   imgLink: string;
-  lastUpdated: string;
   content: string;
-  button: string;
-  buttonOnClick: string;
 }
 
 @Injectable({
@@ -18,36 +15,35 @@ export class AllContentService {
 
   public allContents: ContentInterface[] = [
     {
-      header: 'NENET: An Edge Learnable Network for Link Prediction in Scene Text',
-      headerLink: 'https://arxiv.org/abs/2005.12147',
+      header: 'muon - Web Development Agency',
+      headerLink: 'http://muon-inc.github.io/',
       img: 'assets/muonHome.png',
-      imgLink: '/research/GraphConvolution',
-      lastUpdated: '27th May',
+      imgLink: 'http://muon-inc.github.io/',
       content: `
-          Text detection in scenes based on deep neural networks have shown promising results.
-          Instead of using word bounding box regression, recent state-of-the-art methods have started focusing on character bounding box and pixel-level prediction.
-          This necessitates the need...
+      muon is a web and design services company that designs affordable websites and branding for small and medium size businesses.
           `,
-      button: 'Continue Reading',
-      buttonOnClick: 'window.location = "/research/GraphConvolution"',
     },
     {
-      header: 'Improving Voice Separation by Incorporating End-to-End Speech Recognition',
-      headerLink: 'https://ieeexplore.ieee.org/document/9053845',
-      img: 'assets/images/ICASSP2020.png',
-      imgLink: '/research/VoiceSeparationn',
-      lastUpdated: '26th April',
+      header: 'Tensors',
+      headerLink: 'http://tensors.in/',
+      img: 'assets/hackathon.png',
+      imgLink: 'http://tensors.in/',
       content: `
-          Recent work in speech separation works good in constrained environments but still perform poorely in noisy backgrounds.
-          To further improve voice separation in noisy environments we propose using transfer learning from Automatic Speech Recognition Models.
-          We extract…
+      Tensors is a social initiative aimed to tackle the problems existing in our society today. Tensors hosted De-Cov Ideathon, in association with Indian Medical Association, Kerala(IMA) to tackle issues that arose due to the Covid-19 Outbreak.
           `,
-      button: 'Continue Reading',
-      buttonOnClick: 'window.location = "/research/VoiceSeparation"',
+    },
+    {
+      header: 'Illustrations',
+      headerLink: 'https://akshaykrishh.github.io/illustrations.html',
+      img: 'assets/design/love.jpeg',
+      imgLink: 'https://akshaykrishh.github.io/illustrations.html',
+      content: `
+      I like to do illustrations in my free time. Check them out!
+      `,
     }
   ];
 
-  work = [0, 1];
+  work = [0, 1, 2];
 
   constructor() {
   }
